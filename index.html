@@ -209,11 +209,11 @@
     <script>
         // Función para manejar las solicitudes de demo para las apps sin URL
         function requestDemo(appName) {
-            const modal = document.getElementById('demo-modal');
-            const message = document.getElementById('modal-message');
-            
-            // Actualiza el mensaje en el modal
-            message.innerHTML = `Gracias por su interés en la aplicación <strong>${appName}</strong>. Un especialista se pondrá en contacto pronto para coordinar una demo.`;
+    const phone = '525541888356';
+    const msg = encodeURIComponent('Hola Julio Me interesa conocer mas de tus Apps');
+    const url = `https://wa.me/${phone}?text=${msg}`;
+    window.open(url, '_blank');
+}</strong>. Un especialista se pondrá en contacto pronto para coordinar una demo.`;
             
             // Muestra el modal
             modal.classList.remove('hidden');
