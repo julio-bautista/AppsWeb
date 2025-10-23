@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Aplicaciones Educativas y de Emprendimiento</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno y responsive --><script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4f46e5', // Un tono de índigo para el acento académico
+                        'light-bg': '#f9fafb', // Fondo muy claro
+                        'card-bg': '#ffffff', // Fondo blanco para las fichas
+                        'text-dark': '#1f2937', // Gris oscuro para el texto
+                        'text-light': '#6b7280', // Gris más claro para descripciones
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos generales para un look académico y limpio */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: theme('colors.light-bg');
+        }
+        /* Estilo para las fichas de aplicación */
+        .app-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Ocultar el texto del hipervínculo en la imagen (solo la imagen es el link) */
+        .image-link {
+            display: block;
+            position: relative;
+        }
+        .image-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 lg:p-12">
+
+    <!-- Contenedor Principal --><div class="max-w-7xl mx-auto">
+        
+        <!-- Encabezado de la Página --><header class="text-center mb-16 p-6 bg-white rounded-xl shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-text-dark mb-2">
+                Catálogo de Aplicaciones Educativas y de Emprendimiento
+            </h1>
+            <p class="text-lg text-primary font-medium uppercase tracking-wider">
+                PRUEBA DE MES: Herramientas IA para la Innovación
+            </p>
+        </header>
+
+        <!-- Contenedor de Fichas de Aplicaciones (Grid) --><div id="app-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Ficha 1: Estrategia Comunicativa (CON LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">Estrategia Comunicativa</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Una aplicación de IA que actúa como un reportero y estratega de comunicación, especializado en educación, política, tecnología, IA y marketing digital. Genera análisis periodísticos y estrategias de comunicación integrales (AIO, SEO, SEM…).
+                    </p>
+                </div>
+                <!-- La imagen es el hipervínculo, como se solicitó --><a href="https://ai.studio/apps/drive/1pT2WWRCK0rowFCaarh1NDFyh_lIMdteZ" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                    <img src="https://placehold.co/600x300/eef2ff/4f46e5?text=Periodismo+%26+IA" alt="Imagen representativa de Estrategia Comunicativa" class="w-full h-auto object-cover rounded-lg border-2 border-primary/20">
+                    <!-- Se ha hecho clic en la imagen, el enlace está en el elemento <a> que la envuelve. --></a>
+            </div>
+
+            <!-- Ficha 2: Transcriptor IA (CON LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">Transcriptor IA</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Una aplicación para transcribir, editar, resumir y exportar contenido de videos o audios de manera automática, utilizando IA para análisis y resumen.
+                    </p>
+                </div>
+                <a href="https://ai.studio/apps/drive/1BA9-gqDpgj_sjRhh0rXD39dr1th" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                    <!-- IMAGEN SUBIDA POR EL USUARIO EN TRANSCIPTOR IA --><img src="transcripcion.jpg" 
+                         alt="Robot transcribiendo audio a tableta" 
+                         class="w-full h-auto object-cover rounded-lg border-2 border-green-600/20"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x300/ecfdf5/059669?text=Transcripci%C3%B3n+%26+Resumen';">
+                </a>
+            </div>
+
+            <!-- Ficha 3: Archivo de medios (CON LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">Archivo de medios</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Una aplicación web que permite a diseñadores y agencias generar sets completos de imágenes profesionales y coherentes para redes sociales y sitios web utilizando IA, asegurando consistencia visual y optimizando el flujo de trabajo creativo.
+                    </p>
+                </div>
+                <a href="https://ai.studio/apps/drive/1IysDaeoVkfs_SH62heHT5SDtYjTEz_Wy" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                    <!-- IMAGEN SUBIDA POR EL USUARIO EN ARCHIVO DE MEDIOS --><img src="archivo_de_medios.jpg" 
+                         alt="Personas creando contenido para redes sociales" 
+                         class="w-full h-auto object-cover rounded-lg border-2 border-orange-500/20"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x300/fff7ed/f97316?text=Dise%C3%B1o+Coherente';">
+                </a>
+            </div>
+
+            <!-- Ficha 4: Prompts perfectos para dominar la IA (CON LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">Prompts perfectos para dominar la IA</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Aun te enredas con tantas IA´s, esta aplicación esta prediseñada para que generes contenido como si fueras un experto, solo dile lo que necesitas y te entregará prompts estructurados y de alta calidad para generar contenido digital (texto, imagen, video, audio y código).
+                    </p>
+                </div>
+                <a href="https://ai.studio/apps/drive/1psLRaR3plWU2aPV-tCHQVX3XbyEJSu9m" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                    <!-- IMAGEN SUBIDA POR EL USUARIO EN PROMPTS PERFECTOS --><img src="prompts.jpg" 
+                         alt="Robot escribiendo prompts en un monitor" 
+                         class="w-full h-auto object-cover rounded-lg border-2 border-sky-500/20"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x300/f0f9ff/0ea5e9?text=Generador+de+Prompts';">
+                </a>
+            </div>
+
+            <!-- Ficha 5: 📸Recuerdos vivos📸 (CON LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">📸Recuerdos vivos📸</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Recupera la memoria histórica de tu vida. Esta no es una corrección digital, es un acto que revela lo que ya estaba en ti, en tu linaje, en tu historia. Esta App ¡No es un simple restaurador de fotos, ¡recupera la memoria dormida!
+                    </p>
+                </div>
+                <a href="https://ai.studio/apps/drive/1ecFLDhnmDHCU3ETpL-qvVhlJBw0Y-b" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                    <!-- IMAGEN SUBIDA POR EL USUARIO EN RECUERDOS VIVOS --><img src="recuerdos.jpg" 
+                         alt="Fotografía antigua restaurada" 
+                         class="w-full h-auto object-cover rounded-lg border-2 border-red-500/20"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x300/fef2f2/ef4444?text=Restauraci%C3%B3n+Hist%C3%B3rica';">
+                </a>
+            </div>
+            
+            <!-- Separador para "Otras Apps" --><div class="lg:col-span-3 mt-8 mb-4">
+                <h2 class="text-3xl font-bold text-text-dark border-b-2 border-primary pb-2">Otras Apps (Demo disponible)</h2>
+            </div>
+            
+            <!-- Ficha 6: Asistente Médico Clínico AI (SIN LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">Asistente Médico Clínico AI</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Una aplicación web para ayudar a los médicos de familia con diagnósticos, resúmenes, redacción de informes y consultas a especialistas utilizando IA. Soporta interpretación de radiografías, resúmenes de audio y generación de documentos clínicos.
+                    </p>
+                    <div class="image-link rounded-lg overflow-hidden mb-4">
+                        <!-- IMAGEN SUBIDA POR EL USUARIO EN ASISTENTE MÉDICO CLÍNICO AI --><img src="medico.jpg" 
+                             alt="Médico diagnosticando con tableta" 
+                             class="w-full h-auto object-cover rounded-lg border-2 border-purple-600/20"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x300/f3e8ff/9333ea?text=M%C3%A9dico+%26+IA+Diagn%C3%B3stico';">
+                    </div>
+                </div>
+                <!-- Botón de "Solicite una demo" con acción JS --><button onclick="requestDemo('Asistente Médico Clínico AI')" class="mt-4 w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-150 shadow-md hover:shadow-lg">
+                    Solicite una demo
+                </button>
+            </div>
+
+            <!-- Ficha 7: IA Photo Editor Pro (SIN LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">IA Photo Editor Pro</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Un minieditor de imágenes con el poder de Photoshop pero totalmente gratis. Sube una imagen, añade un texto que describa los cambios que deseas y deja que la IA genere la versión editada.
+                    </p>
+                    <div class="image-link rounded-lg overflow-hidden mb-4">
+                        <!-- IMAGEN SUBIDA POR EL USUARIO EN IA PHOTO EDITOR PRO --><img src="fotoedit.jpg" 
+                             alt="Interfaz de editor de fotos con IA" 
+                             class="w-full h-auto object-cover rounded-lg border-2 border-red-700/20"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x300/fee2e2/dc2626?text=Edici%C3%B3n+con+IA';">
+                    </div>
+                </div>
+                <button onclick="requestDemo('IA Photo Editor Pro')" class="mt-4 w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-150 shadow-md hover:shadow-lg">
+                    Solicite una demo
+                </button>
+            </div>
+
+            <!-- Ficha 8: Outfit Changer (SIN LINK) --><div class="app-card bg-card-bg p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-text-dark mb-3">Outfit Changer</h2>
+                    <p class="text-base text-text-light mb-4">
+                        Un escaparate virtual para probarte la ropa que te gusta, elige entre varios estilos o describe el tuyo para una experiencia virtual, divertida y creativa.
+                    </p>
+                    <div class="image-link rounded-lg overflow-hidden mb-4">
+                        <!-- IMAGEN SUBIDA POR EL USUARIO EN OUTFIT CHANGER --><img src="outfit.jpg" 
+                             alt="Probador virtual con IA" 
+                             class="w-full h-auto object-cover rounded-lg border-2 border-sky-800/20"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x300/e0f2fe/0369a1?text=Probador+Virtual';">
+                    </div>
+                </div>
+                <button onclick="requestDemo('Outfit Changer')" class="mt-4 w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-150 shadow-md hover:shadow-lg">
+                    Solicite una demo
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal/Mensaje personalizado para solicitudes de Demo (en lugar de alert) --><div id="demo-modal" class="fixed inset-0 bg-gray-600 bg-opacity-75 hidden items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full text-center">
+            <h3 class="text-xl font-bold text-primary mb-3">Solicitud de Demostración</h3>
+            <p class="text-text-dark mb-4" id="modal-message">Su solicitud para X ha sido recibida.</p>
+            <button onclick="document.getElementById('demo-modal').classList.add('hidden')" class="bg-primary hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Función para manejar las solicitudes de demo para las apps sin URL
+        function requestDemo(appName) {
+            const modal = document.getElementById('demo-modal');
+            const message = document.getElementById('modal-message');
+            
+            // Actualiza el mensaje en el modal
+            message.innerHTML = `Gracias por su interés en la aplicación <strong>${appName}</strong>. Un especialista se pondrá en contacto pronto para coordinar una demo.`;
+            
+            // Muestra el modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Simula la carga de datos y asegura que el script de Tailwind se ejecute
+        window.onload = () => {
+             // Esto asegura que cualquier manipulación de JS después de que Tailwind esté listo se ejecute.
+        };
+    </script>
+</body>
+</html>
