@@ -81,7 +81,7 @@
                         Una aplicación para transcribir, editar, resumir y exportar contenido de videos o audios de manera automática, utilizando IA para análisis y resumen.
                     </p>
                 </div>
-                <a href="https://ai.studio/apps/drive/1BA9-gqDpgj_sjRhh0rXD39dr1th" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                <a href="https://ai.studio/apps/drive/1BA9-gqDpgj_sjJRhhpw8l0rXD39dr1th" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
                     <!-- IMAGEN SUBIDA POR EL USUARIO EN TRANSCIPTOR IA --><img src="imagen/transcripcion.jpg" 
                          alt="Robot transcribiendo audio a tableta" 
                          class="w-full h-auto object-cover rounded-lg border-2 border-green-600/20"
@@ -126,7 +126,7 @@
                         Recupera la memoria histórica de tu vida. Esta no es una corrección digital, es un acto que revela lo que ya estaba en ti, en tu linaje, en tu historia. Esta App ¡No es un simple restaurador de fotos, ¡recupera la memoria dormida!
                     </p>
                 </div>
-                <a href="https://ai.studio/apps/drive/1ecFLDhnmDHCU3ETpL-qvVhlJBw0Y-b" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
+                <a href="https://ai.studio/apps/drive/1ecFLDhnmDHCUqD3ETpL-qvVhlJBw0Y-b" target="_blank" class="image-link rounded-lg overflow-hidden block hover:opacity-90">
                     <!-- IMAGEN SUBIDA POR EL USUARIO EN RECUERDOS VIVOS --><img src="imagen/recuerdos.jpg" 
                          alt="Fotografía antigua restaurada" 
                          class="w-full h-auto object-cover rounded-lg border-2 border-red-500/20"
@@ -209,11 +209,11 @@
     <script>
         // Función para manejar las solicitudes de demo para las apps sin URL
         function requestDemo(appName) {
-    const phone = '525541888356';
-    const msg = encodeURIComponent('Hola Julio Me interesa conocer mas de tus Apps');
-    const url = `https://wa.me/${phone}?text=${msg}`;
-    window.open(url, '_blank');
-}</strong>. Un especialista se pondrá en contacto pronto para coordinar una demo.`;
+            const modal = document.getElementById('demo-modal');
+            const message = document.getElementById('modal-message');
+            
+            // Actualiza el mensaje en el modal
+            message.innerHTML = `Gracias por su interés en la aplicación <strong>${appName}. Un especialista se pondrá en contacto pronto para coordinar una demo.`;
             
             // Muestra el modal
             modal.classList.remove('hidden');
@@ -225,5 +225,26 @@
              // Esto asegura que cualquier manipulación de JS después de que Tailwind esté listo se ejecute.
         };
     </script>
-</body>
-</html>
+
+<script>
+(function() {
+  function openWA() {
+    var url = "https://wa.me/525541888356?text=Hola%20Julio%20Me%20interesa%20conocer%20mas%20de%20tus%20Apps";
+    window.open(url, "_blank");
+  }
+  window.requestDemo = function(appName) { openWA(); };
+  // Delegate clicks on buttons likely used as demo triggers
+  document.addEventListener('click', function(e) {
+    var t = e.target;
+    if (!t) return;
+    // If it's a button with text "Solicite una demo"
+    var isButton = t.tagName === 'BUTTON' || (t.closest && t.closest('button'));
+    var label = (t.textContent || '').trim().toLowerCase();
+    if ((isButton && label.includes('solicite una demo'))) {
+      e.preventDefault();
+      openWA();
+    }
+  }, true);
+})();
+</script>
+</body></html>
